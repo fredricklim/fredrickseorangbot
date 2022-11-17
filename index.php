@@ -138,7 +138,7 @@ if(is_array($data['events'])){
                         } else {
                            
                             $usr = $profile['displayName'];
-                            //$result = $bot->replyText($event['replyToken'], $usr);
+                            $result = $bot->replyText($event['replyToken'], $usr);
                             $kata =strtolower($event['message']['text']);
                             $query_t = pg_query($db, "SELECT kata  ,jawab  FROM chatbot where kata='$kata'  ");
 
