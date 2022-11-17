@@ -12,8 +12,6 @@
     use \LINE\LINEBot\MessageBuilder\VideoMessageBuilder;
 
     //database
-function pg_connection_string()
-{
     function pg_connection_string()
     {
         $host = "ec2-52-201-124-168.compute-1.amazonaws.com";
@@ -22,8 +20,7 @@ function pg_connection_string()
         $dbname = "dc9krdsmcb7qtr";
         return "dbname=$dbname host=$host port=5432 user=$user password=$pass sslmode=require";
     }
-    return "dbname=$dbname host=$host port=5432 user=$user password=$pass sslmode=require";
-}
+
 
 
     // set false for production
