@@ -12,6 +12,8 @@
     use \LINE\LINEBot\MessageBuilder\VideoMessageBuilder;
 
     //database
+function pg_connection_string()
+{
     function pg_connection_string()
     {
         $host = "ec2-52-201-124-168.compute-1.amazonaws.com";
@@ -20,6 +22,8 @@
         $dbname = "dc9krdsmcb7qtr";
         return "dbname=$dbname host=$host port=5432 user=$user password=$pass sslmode=require";
     }
+    return "dbname=$dbname host=$host port=5432 user=$user password=$pass sslmode=require";
+}
 
 
     // set false for production
@@ -138,7 +142,7 @@ if(is_array($data['events'])){
                         } else {
                            
                             $usr = $profile['displayName'];
-                            $result = $bot->replyText($event['replyToken'], $usr);
+                            //$result = $bot->replyText($event['replyToken'], $usr);
                             $kata =strtolower($event['message']['text']);
                             $query_t = pg_query($db, "SELECT kata  ,jawab  FROM chatbot where kata='$kata'  ");
 
