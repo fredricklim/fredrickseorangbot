@@ -22,7 +22,6 @@
     }
 
 
-
     // set false for production
     $pass_signature = true;
      
@@ -93,16 +92,16 @@ if(is_array($data['events'])){
                 // or we can use replyMessage() instead to send reply message
                 $textMessageBuilder = new TextMessageBuilder($event['message']['text']);
                 $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);
-                 $textMessageBuilder1 = new TextMessageBuilder('ini pesan balasan pertama');
-                 $textMessageBuilder2 = new TextMessageBuilder('ini pesan balasan kedua');
-                 $stickerMessageBuilder = new StickerMessageBuilder(11537, 52002759);
-                 $stickerMessageBuilder2 = new StickerMessageBuilder(1, 126);
+                $textMessageBuilder1 = new TextMessageBuilder('ini pesan balasan pertama');
+                $textMessageBuilder2 = new TextMessageBuilder('ini pesan balasan kedua');
+                $stickerMessageBuilder = new StickerMessageBuilder(11537, 52002759);
+                $stickerMessageBuilder2 = new StickerMessageBuilder(1, 126);
 
-                 $multiMessageBuilder = new MultiMessageBuilder();
-                 $multiMessageBuilder->add($textMessageBuilder1);
-                 $multiMessageBuilder->add($textMessageBuilder2);
-                 $multiMessageBuilder->add($stickerMessageBuilder);
-                 $multiMessageBuilder->add($stickerMessageBuilder2);
+                $multiMessageBuilder = new MultiMessageBuilder();
+                $multiMessageBuilder->add($textMessageBuilder1);
+                $multiMessageBuilder->add($textMessageBuilder2);
+                $multiMessageBuilder->add($stickerMessageBuilder);
+                $multiMessageBuilder->add($stickerMessageBuilder2);
 
 
                 $videoMessageBuilder = new VideoMessageBuilder('https://youtu.be/CMtRrhEbJjw', 'https://file-examples.com/wp-content/uploads/2017/10/file_example_JPG_100kB.jpg');
@@ -116,7 +115,7 @@ if(is_array($data['events'])){
                 $bot->replyText($event['replyToken'], $b);
                 
                     
-                flex
+                 //flex
                 require __DIR__ . '/flex/flex_message.php';
                
                     $flex = file_get_contents("flex_message.json");
@@ -131,7 +130,7 @@ if(is_array($data['events'])){
                             ],
                         ],
                     ]);
-                                        
+                                           
                         //end flex
                     
                         if (!$db) {
