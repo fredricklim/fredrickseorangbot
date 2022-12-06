@@ -14,10 +14,16 @@
     //database
     function pg_connection_string()
     {
-        $host = "ec2-52-201-124-168.compute-1.amazonaws.com";
-        $pass = "ad4bc05f6da65f16ab37323c30dd2bef03a7b7b7cd48e5e95747473710ec3110";
-        $user = "acnbyycwkilhes";
-        $dbname = "dc9krdsmcb7qtr";
+        // $host = "ec2-52-201-124-168.compute-1.amazonaws.com";
+        // $pass = "ad4bc05f6da65f16ab37323c30dd2bef03a7b7b7cd48e5e95747473710ec3110";
+        // $user = "acnbyycwkilhes";
+        // $dbname = "dc9krdsmcb7qtr";
+        // return "dbname=$dbname host=$host port=5432 user=$user password=$pass sslmode=require";
+
+        $host = "arjuna.db.elephantsql.com";
+        $pass = "hqe0XvSXV8w9mtSmFdqv8fFrm7JP3wEt";
+        $user = "rhgsopfg";
+        $dbname = "rhgsopfg";
         return "dbname=$dbname host=$host port=5432 user=$user password=$pass sslmode=require";
     }
 
